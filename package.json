@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "ux designer portfolio",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneta-s/designsystem.git"
+  },
+  "author": "Aneta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aneta-s/designsystem/issues"
+  },
+  "homepage": "https://github.com/aneta-s/designsystem#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+    "commentCompileSass": "Compile=replace main.scss with style.css, so the browser read it. -w stands for change sometgin as soon as I change something in the file. On keyboard 'up+arrow'To type in command line, open new window"
+}
