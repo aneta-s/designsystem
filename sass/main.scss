@@ -11,24 +11,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+
+$color-primary:#262626;
+$nav-color-1:#f9f9f9;
+$nav-color-2:#d4f6fe;
+
 // universal selector - added by jonas https://stackoverflow.com/questions/46475916/whats-the-difference-between-and-html-in-css-selector
 // *{
 //     margin:0;
 //     padding: 0;
 // }
 
-$primary-color: #262626;
-$nav-color1: #f9f9f9;
-$nav-color2: #d4f6fe;
+
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-// :root {
-//     // --primaryColor: #262626;
-//     // --navColor1: #f9f9f9;
-//     --navColor2: #d4f6fe;
-//     --navColor3: #fef1d6;
-//     --navColor4: #e7d8fc;
-//     --navColor5: #ffdac6;
-// }
+:root {
+    --primaryColor: #262626;
+    // --navColor1: #f9f9f9;
+    // --navColor2: #d4f6fe;
+    // --navColor3: #fef1d6;
+    --navColor4: #e7d8fc;
+    --navColor5: #ffdac6;
+}
 
 html {
     box-sizing: border-box;
@@ -113,7 +116,7 @@ nav ul {
         /*45% of the way from the top, not 50% because the font takes some space too*/
         top: 45%;
         /*always use this color, we're not using the css variables*/
-        color: $primary-color;
+        color: $color-primary;
         text-transform: uppercase;
         /*seperate the letters withtin titles to look more unique*/
         letter-spacing: 4px;
@@ -133,7 +136,7 @@ nav ul {
             /*must be responsive*/
             width: 25vw;
             height: 1px;
-            background-color: $primary-color;
+            background-color: $color-primary;
             position: absolute;
             /*kind of in the middle, but little bit higher, height of the line itself */
             top: 47.5%;
@@ -152,15 +155,15 @@ nav ul {
     /*target 1st element*/
   
     nav li:nth-of-type(1) {
-        background-color: var($nav-color1);
+        background-color: $nav-color-1;
     }
 
     nav li:nth-of-type(2) {
-        background-color: var($nav-color2);
+        background-color: $nav-color-2
     }
 
     nav li:nth-of-type(3) {
-        background-color: var(--navColor3);
+        background-color: #fef1d6;
     }
 
     nav li:nth-of-type(4) {
@@ -255,7 +258,7 @@ Below animation takes 0.4s and for each of the animation it launch .2s after the
 .bar3 {
     width: 35px;
     height: 2px;
-    background-color: #262626;
+    background-color: $color-primary;
     margin: 8px 0;
     transition: 0.4s;
 }
@@ -318,7 +321,7 @@ section {
 
     // linkmuis Copy Image Address and paste belo
     section#home {
-        background-color: #f9f9f9;
+        background-color:$nav-color-1;
         // background-image: url("https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=986&q=80");
         // background-size: cover;
         // background-position: center center;
@@ -426,7 +429,7 @@ transform: translateX(-10px);
  }
 
     .btn-white {
-        background-color: #fff;
+        background-color: $color-white;
         color: #ffd236;
         outline: #ffd236;
     }
@@ -439,16 +442,16 @@ transform: translateX(-10px);
     }
 
     section#layout {
-        background-color: var($nav-color1);
+        background-color:$nav-color-1;
     }
     section#content {
-        background-color: var($nav-color2);
+        background-color: $nav-color-2;
 
        
     }
 
     section#components {
-        background-color: var(--navColor3);
+        background-color: #fef1d6;
     }
 
     section#utilities {

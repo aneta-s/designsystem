@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+  --primaryColor: #262626;
+  --navColor4: #e7d8fc;
+  --navColor5: #ffdac6; }
+
 html {
   box-sizing: border-box; }
 
@@ -110,13 +115,13 @@ nav li a:hover::before {
 /*select each of nav elements using pseudo classes ":*/
 /*target 1st element*/
 nav li:nth-of-type(1) {
-  background-color: var(#f9f9f9); }
+  background-color: #f9f9f9; }
 
 nav li:nth-of-type(2) {
-  background-color: var(#d4f6fe); }
+  background-color: #d4f6fe; }
 
 nav li:nth-of-type(3) {
-  background-color: var(--navColor3); }
+  background-color: #fef1d6; }
 
 nav li:nth-of-type(4) {
   background-color: var(--navColor4); }
@@ -306,7 +311,7 @@ section#home a {
   cursor: pointer; }
 
 .btn-white {
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #ffd236;
   outline: #ffd236; }
 
@@ -316,13 +321,13 @@ section#home a {
   color: #fff; }
 
 section#layout {
-  background-color: var(#f9f9f9); }
+  background-color: #f9f9f9; }
 
 section#content {
-  background-color: var(#d4f6fe); }
+  background-color: #d4f6fe; }
 
 section#components {
-  background-color: var(--navColor3); }
+  background-color: #fef1d6; }
 
 section#utilities {
   background-color: var(--navColor4); }
