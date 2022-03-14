@@ -15,6 +15,10 @@
 $color-primary:#262626;
 $nav-color-1:#f9f9f9;
 $nav-color-2:#d4f6fe;
+$nav-color-3:#fef1d6;
+$nav-color-4:#e7d8fc;
+$nav-color-5:#ffdac6;
+$nav-color-6:#ffd236;
 
 // universal selector - added by jonas https://stackoverflow.com/questions/46475916/whats-the-difference-between-and-html-in-css-selector
 // *{
@@ -22,16 +26,6 @@ $nav-color-2:#d4f6fe;
 //     padding: 0;
 // }
 
-
-/*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-:root {
-    --primaryColor: #262626;
-    // --navColor1: #f9f9f9;
-    // --navColor2: #d4f6fe;
-    // --navColor3: #fef1d6;
-    --navColor4: #e7d8fc;
-    --navColor5: #ffdac6;
-}
 
 html {
     box-sizing: border-box;
@@ -60,7 +54,7 @@ body {
     /* as wide as the screen*/
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba($color-primary, 0.25);
     /*get the Navigation on the screen/off the screen. 
       The Navigation is the child of the Overlay, work with .overlay
         Full of the screen, off of the page. To change translateX(-100)from hidden to visible add below variation (4)
@@ -163,15 +157,15 @@ nav ul {
     }
 
     nav li:nth-of-type(3) {
-        background-color: #fef1d6;
+        background-color: $nav-color-3;
     }
 
     nav li:nth-of-type(4) {
-        background-color: var(--navColor4);
+        background-color: $nav-color-4;
     }
 
     nav li:nth-of-type(5) {
-        background-color: var(--navColor5);
+        background-color: $nav-color-5;
     }
 
 /*Slide In Animation of the NAV ITEMS with delay for each nav item https://developer.mozilla.org/en-US/docs/Web/CSS/animation
@@ -315,7 +309,7 @@ section {
     align-items: center;*/
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--primaryColor);
+    color: $color-primary;
 }
 
 
@@ -343,8 +337,8 @@ section {
             text-decoration: none;
             /*font-size: 0.8rem;*/
             padding-bottom: 5px;
-            color: var(--primaryColor);
-            border-bottom: 1px solid var(--primaryColor);
+            color: $color-primary;
+            border-bottom: 1px solid $color-primary;
         }
 
 
@@ -423,21 +417,22 @@ transform: translateX(-10px);
 // Styling button My projects
     .btn:link,
     .btn:visited {    //:link for state selectors ie hover, focus etc, it functions as a link. :visited state when user clicked on the button, and it sees the button again without styling
- border: 2px solid #ffd236;   padding: 15px 40px;//first for top&bottom, second for left&right
+ border: 2px solid #ffd236;   
+ padding: 15px 40px;//first for top&bottom, second for left&right
     display: inline-block;//display as inline block (treat it as text box, to add paddings or widths to the element
    cursor: pointer;
  }
 
     .btn-white {
         background-color: $color-white;
-        color: #ffd236;
-        outline: #ffd236;
+        color: $nav-color-6;
+        outline: $nav-color-6;
     }
 
     .btn-white:hover {
-        border-color: #ffd236;
-        background-color: #ffd236;
-        color: #fff;
+        border-color: $nav-color-6;
+        background-color: $nav-color-6;
+        color: $nav-color-1;;
        
     }
 
@@ -451,15 +446,15 @@ transform: translateX(-10px);
     }
 
     section#components {
-        background-color: #fef1d6;
+        background-color: $nav-color-3;
     }
 
     section#utilities {
-        background-color: var(--navColor4);
+        background-color: $nav-color-4;
     }
 
     section#more {
-        background-color: var(--navColor5);
+        background-color: $nav-color-5;
     }
 
 /* Media Query: Large Smartphone (Vertical) */
