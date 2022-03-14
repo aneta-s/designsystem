@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+// universal selector - added by jonas https://stackoverflow.com/questions/46475916/whats-the-difference-between-and-html-in-css-selector
+* {
+    margin:0;
+    padding: 0;
+}
 
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
@@ -285,7 +290,7 @@ Below animation takes 0.4s and for each of the animation it launch .2s after the
 section {
     width: 100%;
     height: 100vh;
-    position: relative;
+    position: relative; //this is how logo is palced
     font-size: 0.8rem;
     /*display: flex;*/
     padding: 20px;
@@ -296,27 +301,53 @@ section {
     color: var(--primaryColor);
 }
 
-/* --- Logo------------------------------ Can use animation, when hover it */
 
-.logo {
-    height: 35px;
-    }
-
-    .logo:hover{
-        animation: moveInRight 1s ease-out;
+    // linkmuis Copy Image Address and paste belo
+    section#home {
+        background-color: #f9f9f9;
+        // background-image: url("https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=986&q=80");
+        // background-size: cover;
+        // background-position: center center;
+  
     }
     
-    /* --- Hero------------------------------ */
+        /* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
+        .logo {
+            height: 35px;
+        }
+        .logo:hover{
+            animation: moveInRight 1s ease-out;
+        }
+        section#home a { 
+            position: absolute; //placing logo top left relevant to position which is absolute
+            z-index: 2;
+            top: 1.5rem;
+            left: 1.5rem;
+            text-decoration: none;
+            /*font-size: 0.8rem;*/
+            padding-bottom: 5px;
+            color: var(--primaryColor);
+            border-bottom: 1px solid var(--primaryColor);
+        }
+
+
     
-    .text-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); //postion hero in the middle
+    /* --- Heading------------------------------ */
+    
+    .text-box {//stay text always in the middle
+        position: absolute;//to place text in the center of the page
+        top: 50%;//how X hight is the text placed
+        left: 50%; //how Y left or right 
+        transform: translate(-50%, -50%); //postion heading in the middle
+        text-align: center;//place button at the center of the box
     }
- .heading-primary {
-    color:#fff;
+
+
+    .heading-primary { // to style font, add font-size here
+    color: --primaryColor;
+    // text-transform: uppercase;
     backface-visibility: hidden;//backparts of the element gets hidden ie if you want to rotate something and the back part is visible
+    margin-bottom: 40px; //add white space between heading and the button
     }
     
     .heading-primary-main {
@@ -327,7 +358,6 @@ section {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation: moveInRight 1s ease-out;
 
     /*animation-delay: 3s;
     animation-iteration-count: 3;
@@ -335,28 +365,30 @@ section {
     https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
     */
     }
-    heading-primary-sub {
+    .heading-primary-sub {
         display: block;
         font-weight: 400;
+        animation: moveInRight 1s ease-out;//MOVES IN RIGHT DIRECTIONS
+
     }
 
-    @keyframes moveInLeft { //see video 8 SCSS ADVANCED
-        0% { 
+    @keyframes moveInLeft { //FADES IN FROM THE LEFT
+        0% { //STARTS OF THE ANIMATION
             opacity:0 ;
-            transform: translateX(-100px);//minus moves to the right
+            transform: translateX(-100px);//animate in X DIRECTION (minus) moves to the LEFT
         }
     
         80% {
-transform: translateX(10px);
+            transform: translateX(10px);//positive amount go to the right Y
            
         }
-        100% {
+        100% { //ENDS OF THE ANIMATIONS
             opacity:1 ;
             transform: translate(0);
         }
     }
 
-    @keyframes moveInRight { //see video 8 SCSS ADVANCED
+    @keyframes moveInRight {  //FADES IN FROM THE RIGHT
         0% { 
             opacity:0 ;
             transform: translateX(100px);
@@ -371,25 +403,26 @@ transform: translateX(-10px);
         }
     }
 
-    /*linkmuis Copy Image Address and paste belo
-    section#home {
-        background-image: url("https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=986&q=80");
-        background-size: cover;
-        background-position: center center;
-    }
-    */
+// Styling button My projects
+    .btn:link,
+    .btn:visited {    //:link for state selectors ie hover, focus etc, it functions as a link. :visited state when user clicked on the button, and it sees the button again without styling
+ border: 2px solid #ffd236;   padding: 15px 40px;//first for top&bottom, second for left&right
+    display: inline-block;//display as inline block (treat it as text box, to add paddings or widths to the element
+   cursor: pointer;
+ }
 
-        section#home a {
-            position: absolute;
-            z-index: 2;
-            top: 1.5rem;
-            left: 1.5rem;
-            text-decoration: none;
-            /*font-size: 0.8rem;*/
-            padding-bottom: 5px;
-            color: var(--primaryColor);
-            border-bottom: 1px solid var(--primaryColor);
-        }
+    .btn-white {
+        background-color: #fff;
+        color: #ffd236;
+        outline: #ffd236;
+    }
+
+    .btn-white:hover {
+        border-color: #ffd236;
+        background-color: #ffd236;
+        color: #fff;
+       
+    }
 
     section#layout {
         background-color: var(--navColor1);
@@ -424,3 +457,157 @@ transform: translateX(-10px);
         right: 1rem;
     }
 }
+
+
+
+
+// /* font */
+// font-family: 'RalewayBold';
+// font-family: 'Raleway', sans-serif;
+
+// .button {
+//     background: #fafafa;
+//     background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+//     background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+//     background: -o-linear-gradient(top, #ffffff, #eeeeee);
+//     background: linear-gradient(to bottom, #ffffff, #eeeeee);
+//     border: 1px solid #bbbbbb;
+//     border-radius: 4px;
+//     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+//     color: #555555;
+//     cursor: pointer;
+//     display: inline-block;
+//     font-family: "Helvetica Neue", Arial, Verdana, "Nimbus Sans L", sans-serif;
+//     font-size: 13px;
+//     font-weight: 500;
+//     height: 31px;
+//     line-height: 28px;
+//     outline: none;
+//     padding: 0 13px;
+//     text-shadow: 0 1px 0 white;
+//     text-decoration: none;
+//     vertical-align: middle;
+//     white-space: nowrap;
+//     -webkit-font-smoothing: antialiased;
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//   }
+  
+//   .button-blue {
+//     background: #1385e5;
+//     background: -webkit-linear-gradient(top, #53b2fc, #1385e5);
+//     background: -moz-linear-gradient(top, #53b2fc, #1385e5);
+//     background: -o-linear-gradient(top, #53b2fc, #1385e5);
+//     background: linear-gradient(to bottom, #53b2fc, #1385e5);
+//     border-color: #075fa9;
+//     color: white;
+//     font-weight: bold;
+//     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+//   }
+  
+//   background-color: #F36C00;
+//   background-color: #ff9; 
+//   color: #000;
+// /* addevent */
+//   #0b1518;
+//    #1a4255; 
+//    background: #f0f8fb
+//    border: 1px solid #bcd1da;
+//    background: #2f98e2
+//    color: #ffffff;
+//    &:hover {
+//     background: #2f8bcb;
+// }
+// border: 1px solid #bcd1da;
+// background: #e2f0f6;
+// border-bottom: 1px solid #c0d4dc;
+// color: #88979e;
+// background-color: #e1eff6;
+
+// /* choose file */
+// border-bottom: 1px solid #c0d4dc; 
+//    font {
+//     background: #cfe5ee;
+//     color: #7c9aa7;
+//     &::-webkit-input-placeholder { color:#7c9aa7; }
+//     &::-moz-placeholder { color:#7c9aa7; } /* firefox 19+ */
+//     &:-ms-input-placeholder { color:#7c9aa7; } /* ie */
+//     &:-moz-placeholder { color:#7c9aa7; }
+
+//    }
+//    /* style */
+// { background: #888; }
+// .nano .slider { background: #111; };
+// background: #888; 
+// /* search container */
+// background: #ffc600;
+// border-bottom: 1px solid #ffd236;
+// border-bottom: 1px solid #d4aa16;
+// color: #7e6717; 
+// color: #7e5e14;
+// background: #fff9e6; 
+// background: #fff9e6;
+// -moz-box-shadow: 0 0 23px 1px rgba(213, 169, 17, 0.3);
+// /* outer glow */
+// -webkit-box-shadow: 0 0 23px 1px rgba(213, 169, 17, 0.3);
+// /* outer glow */
+// box-shadow: 0 0 23px 1px rgba(213, 169, 17, 0.3);
+
+// border: 1px solid #726c59;
+// /* login wrapper */
+// background-color: #e6faf5;
+// border: 1px solid #9de1ca;
+// color: #2fb487;
+// color: #9ae1c9;
+// border-left: 1px solid #c0ddd3;
+// color: #638378;
+// border-top: 1px solid #c0ddd3;
+// color: #ffffff;
+// background: #2f98e2; 
+// background: #3b579c;
+// background: #e6faf5;
+// color: #b0c5c0;
+// background: #b9e1d3; 
+// background: #3ec094 !important;
+// background-color: #2fe2a5;
+// border: 1px solid #2fc491;
+// background: #e6faf5;
+// background: #cdf3e6;
+// background: #2f8bcb; 
+// background: #344b84; 
+// color: #b0c5c0; 
+// background: #cdf3e6;
+// background: #727a68;
+
+// /* event list */
+// background: #ecfed4;
+// background: #d4f6fe;
+// background: #fef1d6; 
+// background: #e7d8fc; 
+// background: #e0fede; 
+// background: #ffdac6;
+// background: #d9fff5; 
+// background: #f9f9f9; 
+// color: #ff0000
+// color: #262626;
+// background: #727a68;
+
+// background: #202020;
+// color: #171b12;
+// background: #1d2325;
+// border: 1px solid #353535;
+// color: #4b4b4b;
+// color: #8e8e8e;
+// border-color: transparent transparent transparent #8e8e8e; 
+// /* single event */
+// background: #eaeaea;
+// border: 1px solid #d0d0d0;
+// background: #e6e7e4;
+// color: #1e1e1e;
+// color: #636363;
+// background-color: #f5f5f5;
+// border: 1px solid #d7748c;
+// color: #ed1a4d;
+// background: #d9dada; 
+// border: 1px solid #cccccc;

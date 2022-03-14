@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
   --primaryColor: #262626;
@@ -235,23 +239,39 @@ section {
   letter-spacing: 2px;
   color: var(--primaryColor); }
 
-/* --- Logo------------------------------ Can use animation, when hover it */
+section#home {
+  background-color: #f9f9f9; }
+
+/* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
 .logo {
   height: 35px; }
 
 .logo:hover {
   animation: moveInRight 1s ease-out; }
 
-/* --- Hero------------------------------ */
+section#home a {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 1.5rem;
+  text-decoration: none;
+  /*font-size: 0.8rem;*/
+  padding-bottom: 5px;
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor); }
+
+/* --- Heading------------------------------ */
 .text-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .heading-primary {
-  color: #fff;
-  backface-visibility: hidden; }
+  color: --primaryColor;
+  backface-visibility: hidden;
+  margin-bottom: 40px; }
 
 .heading-primary-main {
   display: block;
@@ -259,16 +279,16 @@ section {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  animation: moveInRight 1s ease-out;
   /*animation-delay: 3s;
     animation-iteration-count: 3;
     ease-in animation start slower, and ten axcellarate over time
     https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
     */ }
 
-heading-primary-sub {
+.heading-primary-sub {
   display: block;
-  font-weight: 400; }
+  font-weight: 400;
+  animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -290,23 +310,22 @@ heading-primary-sub {
     opacity: 1;
     transform: translate(0); } }
 
-/*linkmuis Copy Image Address and paste belo
-    section#home {
-        background-image: url("https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=986&q=80");
-        background-size: cover;
-        background-position: center center;
-    }
-    */
-section#home a {
-  position: absolute;
-  z-index: 2;
-  top: 1.5rem;
-  left: 1.5rem;
-  text-decoration: none;
-  /*font-size: 0.8rem;*/
-  padding-bottom: 5px;
-  color: var(--primaryColor);
-  border-bottom: 1px solid var(--primaryColor); }
+.btn:link,
+.btn:visited {
+  border: 2px solid #ffd236;
+  padding: 15px 40px;
+  display: inline-block;
+  cursor: pointer; }
+
+.btn-white {
+  background-color: #fff;
+  color: #ffd236;
+  outline: #ffd236; }
+
+.btn-white:hover {
+  border-color: #ffd236;
+  background-color: #ffd236;
+  color: #fff; }
 
 section#layout {
   background-color: var(--navColor1); }
