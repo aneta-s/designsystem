@@ -18,15 +18,17 @@
 // }
 
 $primary-color: #262626;
+$nav-color1: #f9f9f9;
+$nav-color2: #d4f6fe;
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-:root {
-    // --primaryColor: #262626;
-    --navColor1: #f9f9f9;
-    --navColor2: #d4f6fe;
-    --navColor3: #fef1d6;
-    --navColor4: #e7d8fc;
-    --navColor5: #ffdac6;
-}
+// :root {
+//     // --primaryColor: #262626;
+//     // --navColor1: #f9f9f9;
+//     --navColor2: #d4f6fe;
+//     --navColor3: #fef1d6;
+//     --navColor4: #e7d8fc;
+//     --navColor5: #ffdac6;
+// }
 
 html {
     box-sizing: border-box;
@@ -111,7 +113,7 @@ nav ul {
         /*45% of the way from the top, not 50% because the font takes some space too*/
         top: 45%;
         /*always use this color, we're not using the css variables*/
-        color: #262626;
+        color: $primary-color;
         text-transform: uppercase;
         /*seperate the letters withtin titles to look more unique*/
         letter-spacing: 4px;
@@ -131,7 +133,7 @@ nav ul {
             /*must be responsive*/
             width: 25vw;
             height: 1px;
-            background-color: #262626;
+            background-color: $primary-color;
             position: absolute;
             /*kind of in the middle, but little bit higher, height of the line itself */
             top: 47.5%;
@@ -150,11 +152,11 @@ nav ul {
     /*target 1st element*/
   
     nav li:nth-of-type(1) {
-        background-color: var(--navColor1);
+        background-color: var($nav-color1);
     }
 
     nav li:nth-of-type(2) {
-        background-color: var(--navColor2);
+        background-color: var($nav-color2);
     }
 
     nav li:nth-of-type(3) {
@@ -437,10 +439,10 @@ transform: translateX(-10px);
     }
 
     section#layout {
-        background-color: var(--navColor1);
+        background-color: var($nav-color1);
     }
     section#content {
-        background-color: var(--navColor2);
+        background-color: var($nav-color2);
 
        
     }

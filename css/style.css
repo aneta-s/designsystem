@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-:root {
-  --navColor1: #f9f9f9;
-  --navColor2: #d4f6fe;
-  --navColor3: #fef1d6;
-  --navColor4: #e7d8fc;
-  --navColor5: #ffdac6; }
-
 html {
   box-sizing: border-box; }
 
@@ -117,10 +110,10 @@ nav li a:hover::before {
 /*select each of nav elements using pseudo classes ":*/
 /*target 1st element*/
 nav li:nth-of-type(1) {
-  background-color: var(--navColor1); }
+  background-color: var(#f9f9f9); }
 
 nav li:nth-of-type(2) {
-  background-color: var(--navColor2); }
+  background-color: var(#d4f6fe); }
 
 nav li:nth-of-type(3) {
   background-color: var(--navColor3); }
@@ -323,10 +316,10 @@ section#home a {
   color: #fff; }
 
 section#layout {
-  background-color: var(--navColor1); }
+  background-color: var(#f9f9f9); }
 
 section#content {
-  background-color: var(--navColor2); }
+  background-color: var(#d4f6fe); }
 
 section#components {
   background-color: var(--navColor3); }
