@@ -258,6 +258,28 @@ Below animation takes 0.4s and for each of the animation it launch .2s after the
     transform: rotate(45deg) translate(-6px, -8px);
 }
 
+// /* --- Header ------------------------------------ */
+// .header {
+//     height: 85vh;
+//     position: relative;
+
+//     &_logo-box {
+// position: absolute;
+// top: 4rem;
+// left: 4rem;
+//     }
+//     &_logo {
+//         height: 3.5rem;
+//     }
+//     &_text-box {
+//         position: absolute;
+//         top: 40%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         text-align: center;
+//     }
+// }
+
 /* --- Sections ------------------------------------ */
 
 section {
