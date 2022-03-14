@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-* {
-  margin: 0;
-  padding: 0; }
-
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
-  --primaryColor: #262626;
   --navColor1: #f9f9f9;
   --navColor2: #d4f6fe;
   --navColor3: #fef1d6;

@@ -1,14 +1,26 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "pages/home";
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 // universal selector - added by jonas https://stackoverflow.com/questions/46475916/whats-the-difference-between-and-html-in-css-selector
-* {
-    margin:0;
-    padding: 0;
-}
+// *{
+//     margin:0;
+//     padding: 0;
+// }
 
+$primary-color: #262626;
 /*CSS Variables https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
-    --primaryColor: #262626;
+    // --primaryColor: #262626;
     --navColor1: #f9f9f9;
     --navColor2: #d4f6fe;
     --navColor3: #fef1d6;
