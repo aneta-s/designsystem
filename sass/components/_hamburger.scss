@@ -1,0 +1,39 @@
+/* ADD HAMBURGER MENU TO SHOW/HIDE THE NAVIGATION TOGGLE ON/OFF*/
+
+/* --- Menu Bars  https://www.w3schools.com/howto/howto_css_menu_icon.asp ------------------------------------ */
+
+.menu-bars {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+    display: inline;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 3.5rem;
+    height: .2rem;
+    background-color: $color-primary;
+    margin: .8rem 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar 
+    To turn on/off the bar, use .change class to show up the X, when off it is regular bar (JS file)
+*/
+.change .bar1 {
+    transform: rotate(-45deg) translate(-.7rem, .8rem);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-.6rem, -.8rem);
+}

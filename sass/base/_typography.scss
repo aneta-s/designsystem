@@ -1,0 +1,57 @@
+body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    background: $color-primary;
+    /*update font family*/
+
+}
+// MY NAME IS....TITLE
+.heading-primary { // to style font, add font-size here
+    color: --primaryColor;
+    // text-transform: uppercase;
+    backface-visibility: hidden;//backparts of the element gets hidden ie if you want to rotate something and the back part is visible
+    margin-bottom: 4rem; //add white space between heading and the button
+    }
+    
+    .heading-primary-main {
+    display: block;
+    font-weight: 400;
+    }
+    .heading-primary-sub {
+        display: block;
+        font-weight: 400;
+        animation: moveInRight 1s ease-out;//MOVES IN RIGHT DIRECTIONS
+    
+    }
+    
+
+    // TITLE ABOUT ME INCL ANIMATION
+    
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;//background untill text block
+    background-image: linear-gradient(to right, $nav-color-3, $nav-color-6);
+    -webkit-background-clip: text;//background onyl visible where text is
+    color: transparent;  //make text transparent
+
+    &:hover {
+        transform:skewY(0) skewX(15deg);
+        text-shadow: .5rem 1rem 2rem rgba($color-primary, $alpha: .1);//what is alpha, it stands wrong here, check wioth jonas codde
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;//space around the paragraphs, expect the last paragraph &:not(:last-child)
+    }
+}

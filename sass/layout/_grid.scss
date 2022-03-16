@@ -1,0 +1,44 @@
+.row {
+    max-width: $grid-width;
+    background-color: green;
+    margin: 0 auto;
+    //margin-bottom: $gutter-vertical;
+
+    &:not(:last-child){//not sudo selector : select everything except the last child
+        margin-bottom: $gutter-vertical;
+        float: left;
+    }
+
+    @include clearfix;//does the trick (see mixins)
+
+    [class^="col-"] {//what to select? based on class, should starts (^)with col-....select all columns at the same time
+        background-color: red;
+        float: left;
+
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calc((100%-#{$gutter-horizontal})/2);//adv scss section 32 calc to mix units
+    }
+    // .col-1-of-3{
+    //     width: calc((100%-2*#{$gutter-horizontal})/3);
+    // }
+    // .col-2-of-3{//calculate width of column with text "This is a column 2 of 3"? see below
+    //     width: calc(2*((100%-2*#{$gutter-horizontal})/3)+#{$gutter-horizontal});
+    // }
+    // .col-1-of-4 {
+    //     width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    // }
+
+    // .col-2-of-4 {
+    //     width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    // }
+
+    // .col-3-of-4 {
+    //     width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    // }
+
+}

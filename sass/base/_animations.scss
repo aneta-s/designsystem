@@ -1,0 +1,146 @@
+
+  /* --- Navigation Menu ------------------------------ */
+
+/* Overlay */
+.overlay {
+    /*scroll always there*/
+    position: fixed;
+    /* above everything else on our page*/
+    z-index: 9;
+    top: 0;
+    /* on the right corner*/
+    left: 0;
+    /* as wide as the screen*/
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color-primary, 0.25);
+    /*get the Navigation on the screen/off the screen. 
+      The Navigation is the child of the Overlay, work with .overlay
+        Full of the screen, off of the page. To change translateX(-100)from hidden to visible add below variation (4)
+    */
+    transform: translateX(-100vw);
+}
+/*4*/
+/*Show Navigation (is hidden yet) nice & slowly*/
+.overlay-slide-right {
+    transition: all 0.4s ease-in-out;
+    /*bring the Navigation back in the view*/
+    transform: translateX(0);
+}
+/*bring the Navigation out of the view. Restore to -100vw as it was initially*/
+.overlay-slide-left {
+    transition: all 0.8s ease-in-out;
+    /*bring the Navigation back out off the view*/
+    transform: translateX(-100vw);
+}
+/*to actually make the Navigation work (4) need to add and remove these classes to .overlay (JS file "Toggle: Menu Active")*/
+
+/*Slide In Animation of the NAV ITEMS with delay for each nav item https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+Below Class for each animations for each item in Navigation
+    linear means it moves at an even speed, with delay of 0.2s, both fills backwords and forwards. 
+*/
+.slide-in-1 {
+    animation: slide-in 0.4s linear 0.2s both;
+}
+/*delay is adjusted so thre is more delayed then the last by .2s more on each of them*/
+.slide-in-2 {
+    animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+    animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+    animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+    animation: slide-in 0.4s linear 1s both;
+}
+/*The actual animation. @keyframes to dictate the animation sliding from the screen and off to the screen
+Below animation takes 0.4s and for each of the animation it launch .2s after the previous one*/
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%); /*% it is not the parent element*/
+    }
+
+    to {
+        transform: translateX(0); /*showing full navigation*/
+    }
+}
+/*do the opposite for Slide Out Animation, increate delay by.1s, set max of fill with 0.5s as it slide in increment by .1s*/
+.slide-out-1 {
+    animation: slide-out 0.3s linear 0.5s both;
+}
+/*delay is adjusted so there is more delayed then the last by .2s more on each of them*/
+.slide-out-2 {
+    animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+    animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+    animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+    animation: slide-out 0.3s linear 0.1s both;
+}
+/*reverse keyframes*/
+@keyframes slide-out {
+    from {
+        transform: translateX(0); /*it starts on the page already*/
+    }
+
+    to {
+        transform: translateX(-100%); /*animatie it off the page*/
+    }
+}
+
+@keyframes moveInLeft { //FADES IN FROM THE LEFT
+        0% { //STARTS OF THE ANIMATION
+            opacity:0 ;
+            transform: translateX(-10rem);//animate in X DIRECTION (minus) moves to the LEFT
+        }
+    
+        80% {
+            transform: translateX(1rem);//positive amount go to the right Y
+           
+        }
+        100% { //ENDS OF THE ANIMATIONS
+            opacity:1 ;
+            transform: translate(0);
+        }
+    }
+
+    @keyframes moveInRight {  //FADES IN FROM THE RIGHT
+        0% { 
+            opacity:0 ;
+            transform: translateX(10rem);
+        }
+        80% {
+transform: translateX(-1rem);
+           
+        }
+        100% {
+            opacity:1 ;
+            transform: translate(0);
+        }
+    }
+
+
+.heading-primary-main {
+    //animation required to work
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+    /*animation-delay: 3s;
+    animation-iteration-count: 3;
+    ease-in animation start slower, and ten axcellarate over time
+    https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+    */
+    }

@@ -1,0 +1,95 @@
+
+
+/* Nav Menu Items (parent of the Navigation)*/
+
+nav,
+nav ul {
+    /* width of the Menu Items full width*/
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+    /* styling nav bar everything flow top-bottom & stretch */
+    nav ul {
+        display: flex;
+        /* items top to bottom instad left to right*/
+        flex-direction: column;
+        /* stretch to fit the width of the page */
+        justify-content: stretch;
+        list-style: none;
+    }
+        /* add height to each item so they spread out to them full heigth all of those*/
+        nav ul li {
+            /* use % instead of vh to be 20% height of the parent ( nav, nav ul height: 100vh;) which is already set up above*/
+            height: 20%;
+            /* don't stretch the page horizontal, don't want horizontal scrollbar after all*/
+            overflow: hidden;
+        }
+
+    /*style anker tag within Navigation*/
+    nav li a {
+        /*centered within each of the boxes*/
+        position: relative;
+        /*45% of the way from the top, not 50% because the font takes some space too*/
+        top: 45%;
+        /*always use this color, we're not using the css variables*/
+        color: $color-primary;
+        text-transform: uppercase;
+        /*seperate the letters withtin titles to look more unique*/
+        letter-spacing: .4rem;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+        /*add interactivity when hovering over the items*/
+        nav li a:hover {
+            /*make our nav anker 10% bigger*/
+            transform: scale(1.1);
+        }
+        /*hightlight it to have animated effect*/
+        /*add content before anker element, add line instead of text */
+        nav li a::before {
+            content: "";
+            /*must be responsive*/
+            width: 25vw;
+            height: .1rem;
+            background-color: $color-primary;
+            position: absolute;
+            /*kind of in the middle, but little bit higher, height of the line itself */
+            top: 47.5%;
+            /*start on the left side*/
+            left: 0;
+            /*1. by default the opacity is 0*/
+            opacity: 0;
+        }
+
+
+
+        nav li a:hover::before {
+            /*2. the opacity will be 1 if hovered over it*/
+            opacity: 1;
+        }    /*select each of nav elements using pseudo classes ":*/
+    /*target 1st element*/
+  
+    nav li:nth-of-type(1) {
+        background-color: $nav-color-1;
+    }
+
+    nav li:nth-of-type(2) {
+        background-color: $nav-color-2
+    }
+
+    nav li:nth-of-type(3) {
+        background-color: $nav-color-3;
+    }
+
+    nav li:nth-of-type(4) {
+        background-color: $nav-color-4;
+    }
+
+    nav li:nth-of-type(5) {
+        background-color: $nav-color-5;
+    }
+
+

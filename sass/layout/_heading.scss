@@ -1,0 +1,11 @@
+/* --- Heading------------------------------ */
+    
+.text-box {//stay text always in the middle
+    position: absolute;//to place text in the center of the page
+    top: 50%;//how X hight is the text placed
+    left: 50%; //how Y left or right 
+    transform: translate(-50%, -50%); //postion heading in the middle
+    text-align: center;//place button at the center of the box
+}
+
+
