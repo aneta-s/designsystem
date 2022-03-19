@@ -1,0 +1,18 @@
+.composition {
+
+    &__photo {
+        // width: 55%;
+        // box-shadow: 0 1.5rem 4rem rgba($color-primary, .4);
+      border-radius: 50%;
+        // position: absolute;
+        // //place photos on top of the other photos
+        // &--p1 {
+        //     left: 0;
+        //     top: -2rem;//move upwords (0 minus 2)section 37 adv scss min 7:37
+        // }
+     display: flex;
+     height: 100%;
+     align-items: center;
+     justify-content: center;
+    }
+}

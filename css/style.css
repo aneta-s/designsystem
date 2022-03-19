@@ -203,6 +203,13 @@ body {
 .btn-text {
   font-size: 1.6rem; }
 
+.composition__photo {
+  border-radius: 50%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
 /* ADD HAMBURGER MENU TO SHOW/HIDE THE NAVIGATION TOGGLE ON/OFF*/
 /* --- Menu Bars  https://www.w3schools.com/howto/howto_css_menu_icon.asp ------------------------------------ */
 .menu-bars {
@@ -252,8 +259,10 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-  .row .col-1-of-2 {
-    width: calc((100%-6rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100%-2*6rem)/3); }
+  .row .col-2-of-3 {
+    width: calc(2*((100%-2*6rem)/3)+6rem); }
 
 /* --- Heading------------------------------ */
 .text-box {
@@ -354,8 +363,6 @@ section {
   padding: 2rem;
   /*justify-content: center;
     align-items: center;*/
-  text-transform: uppercase;
-  letter-spacing: 2rem;
   color: #262626; }
 
 section#home {
