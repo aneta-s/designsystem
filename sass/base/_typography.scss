@@ -7,15 +7,27 @@ body {
 }
 // MY NAME IS....TITLE
 .heading-primary { // to style font, add font-size here
-    color: --primaryColor;
-    // text-transform: uppercase;
+    color: $color-primary;
+    text-transform: uppercase;
     backface-visibility: hidden;//backparts of the element gets hidden ie if you want to rotate something and the back part is visible
-    margin-bottom: 4rem; //add white space between heading and the button
+    margin-bottom: 4rem; //add whitee space between heading and the button
     }
     
     .heading-primary-main {
     display: block;
     font-weight: 400;
+        //animation required to work
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+        /*animation-delay: 3s;
+        animation-iteration-count: 3;
+        ease-in animation start slower, and ten axcellarate over time
+        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+        */
+        
+
     }
     .heading-primary-sub {
         display: block;
@@ -25,7 +37,7 @@ body {
     }
     
 
-    // TITLE ABOUT ME INCL ANIMATION
+    // TITLE ABOUT ME
     
 .heading-secondary {
     font-size: 3.5rem;
@@ -38,7 +50,7 @@ body {
 
     &:hover {
         transform:skewY(0) skewX(15deg);
-        text-shadow: .5rem 1rem 2rem rgba($color-primary, $alpha: .1);//what is alpha, it stands wrong here, check wioth jonas codde
+        text-shadow: .5rem 1rem 2rem rgba($color-primary, .1);//what is alpha, it stands wrong here, check wioth jonas codde
     }
 }
 

@@ -109,16 +109,6 @@ Below animation takes 0.4s and for each of the animation it launch .2s after the
     opacity: 1;
     transform: translate(0); } }
 
-.heading-primary-main {
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /*animation-delay: 3s;
-    animation-iteration-count: 3;
-    ease-in animation start slower, and ten axcellarate over time
-    https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
-    */ }
-
 *,
 *::after,
 *::before {
@@ -136,13 +126,22 @@ body {
   /*update font family*/ }
 
 .heading-primary {
-  color: --primaryColor;
+  color: #262626;
+  text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 4rem; }
 
 .heading-primary-main {
   display: block;
-  font-weight: 400; }
+  font-weight: 400;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /*animation-delay: 3s;
+        animation-iteration-count: 3;
+        ease-in animation start slower, and ten axcellarate over time
+        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+        */ }
 
 .heading-primary-sub {
   display: block;
@@ -203,12 +202,26 @@ body {
 .btn-text {
   font-size: 1.6rem; }
 
-.composition__photo {
-  border-radius: 50%;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center; }
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(38, 38, 38, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 20%;
+      top: 4rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #d4f6fe;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(38, 38, 38, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 /* ADD HAMBURGER MENU TO SHOW/HIDE THE NAVIGATION TOGGLE ON/OFF*/
 /* --- Menu Bars  https://www.w3schools.com/howto/howto_css_menu_icon.asp ------------------------------------ */
@@ -248,8 +261,7 @@ body {
   background-color: green;
   margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 8rem;
-    float: left; }
+    margin-bottom: 8rem; }
   .row::after {
     content: "";
     display: table;
@@ -260,9 +272,9 @@ body {
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
   .row .col-1-of-3 {
-    width: calc((100%-2*6rem)/3); }
+    width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc(2*((100%-2*6rem)/3)+6rem); }
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
 
 /* --- Heading------------------------------ */
 .text-box {
