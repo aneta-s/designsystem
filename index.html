@@ -21,8 +21,8 @@
       <nav>
         <ul>
           <!-- Because slide-out- is transforming off the page, we don't see it when load page fro the first time -->
-          <li id="nav-1" class="slide-out-1"><a href="#layout">Layout</a></li>
-          <li id="nav-2" class="slide-out-2"><a href="#content">Content</a></li>
+          <li id="nav-1" class="slide-out-1"><a href="#about">About</a></li>
+          <li id="nav-2" class="slide-out-2"><a href="#projectOne">project one</a></li>
           <li id="nav-3" class="slide-out-3">
             <a href="#components">Components</a>
           </li>
@@ -56,11 +56,11 @@
         >
       </h1>
       <!-- below: styles about the color in btn-white class, for buttons functionality use btn class-->
-      <a href="#" class="btn btn-white">My Projects</a>
+      <a href="#" class="btn btn-text">My Projects</a>
     </div>
     <!-- ABOUT ME PAGE -->
     <main>
-      <section id="layout">
+      <section id="about">
         <!-- utility class u-margin-8 let to stay independent/reusable across the page-->
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">About Me</h2>
@@ -96,30 +96,44 @@
               component-based design in modern JavaScript frameworks.
             </p>
 
-            <a href="assets/resume-uxui-designer.pdf" class="btn-text">Resume &rarr;</a>
+            <a href="assets/resume-uxui-designer.pdf" class="btn btn-text">Resume &rarr;</a>
           </div>
         </div>
       </section>
     </main>
-    <section id="content">
+    <section id="projectOne">
       <!-- of .active? -->
-      <div class="typography">
-        <h1>Info about Typography</h1>
-        <p>
-          Description abougfkfye Typography, including global settings,
-          headings, body text, lists and more. Also information how to use the
-          typography, in which ocontext of the product, also called the
-          functional model
-        </p>
-        <div class="display">
-          <h1><span>4em</span> Design system is how design works</h1>
-          <h2><span>3em</span> Design system is how design works</h2>
-          <h3><span>2em</span> Design system is how design works</h3>
-          <h4><span>1em</span> Design system is how design works</h4>
-
-          <textarea disabled> source code </textarea>
-        </div>
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">Projects</h2>
       </div>
+    <div class="project-container">
+        <div class="zone text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+             Project Title
+            </h3>
+            <p class="paragraph">
+              This project is about lorem ipsum and enthusiastic UX/UI Designer with front-end
+              skills and experience with web mobile design and UX. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias fugit ea unde animi minus et quisquam dignissimos culpa aut aperiam? Expedita, et. Amet molestiae possimus ea perspiciatis. Accusantium, dolor exercitationem.
+            </p>
+            <p class="paragraph"> <strong> Skills performed: </strong>
+              Figma, Illustrator, React. I
+              have been a UX/UI Designer for web and mobile apps using
+              Figma/Sketch, Illustrator and HTML-prototypes. 
+            </p>
+
+            <a href="#" class="btn btn-text">UX process &rarr;</a>
+            <a href="#" class="btn btn-text">Prototype &rarr;</a>
+          </div>
+          <div class="area image">
+            <img
+              src="image/habitual.png"
+              alt="Profile Photo"
+              class="photo"
+              height="auto"
+              width="400px"
+            />
+          </div>
+    </div>
     </section>
     <section id="components">
       <div class="main-nav">
@@ -214,69 +228,5 @@
     </section>
     <!-- Script -->
     <script src="script.js"></script>
-    <!-- section 34 adv scss
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-2-of-3">
-                    Col 2 of 3
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-2-of-4">
-                    Col 2 of 4
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-3-of-4">
-                    Col 3 of 4
-                </div>
-            </div>
-        </section>
-        -->
   </body>
 </html>

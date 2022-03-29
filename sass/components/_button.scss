@@ -1,40 +1,26 @@
 // Styling button My projects
 .btn:link,
 .btn:visited {    //:link for state selectors ie hover, focus etc, it functions as a link. :visited state when user clicked on the button, and it sees the button again without styling
-border: .2rem solid $nav-color-6;   
+    display: inline-block;//display as inline block (treat it as text box, to add paddings or widths to the element
+  position: relative;
+    font-size: $default-font-size;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 1;
+   // transition: all .6s cubic-bezier(.19,1,.22,1);
+    border: .2rem solid $nav-color-6;   
 padding: 1.5rem 4rem;//first for top&bottom, second for left&right
-display: inline-block;//display as inline block (treat it as text box, to add paddings or widths to the element
 cursor: pointer;
 //missing font-size 1.6rem?
 }
 
-.btn-white {
-    background-color: $nav-color-1;
-    color: $nav-color-6;
-    outline: $nav-color-6;
-}
-
-.btn-white:hover {
-    border-color: $nav-color-6;
-    background-color: $nav-color-6;
-    color: $nav-color-1;;
-   
-}
-
 //NORMAL STATE BUTTON
 .btn-text {
-    &:link,
-&:visited {
-
-    font-size: $default-font-size;
-    border: .2rem solid $nav-color-2;   
-    padding: 1.5rem 4rem;//first for top&bottom, second for left&right
-    display: inline-block;//display as inline block (treat it as text box, to add paddings or widths to the element
-     color: $nav-color-2;
-     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $nav-color-2 50%);
+     color: $nav-color-6;
+     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $nav-color-6 50%);
      background-size: 220%;
      transition: all .4s;
-    }
+ 
 
       //ACT OF STATE
     &:hover,
@@ -43,7 +29,4 @@ cursor: pointer;
         color: $nav-color-1;
         transform: translateX(1rem);
     }
-
-
-
 }

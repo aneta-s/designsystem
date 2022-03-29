@@ -174,45 +174,54 @@ body {
   text-align: center; }
 
 .u-margin-bottom-small {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.6rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 3.2rem; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 6.4rem; }
 
 .btn:link,
 .btn:visited {
+  display: inline-block;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 1;
   border: 0.2rem solid #ffd236;
   padding: 1.5rem 4rem;
-  display: inline-block;
   cursor: pointer; }
 
-.btn-white {
-  background-color: #f9f9f9;
+.btn-text {
   color: #ffd236;
-  outline: #ffd236; }
-
-.btn-white:hover {
-  border-color: #ffd236;
-  background-color: #ffd236;
-  color: #f9f9f9; }
-
-.btn-text:link, .btn-text:visited {
-  font-size: 1.6rem;
-  border: 0.2rem solid #d4f6fe;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  color: #d4f6fe;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #d4f6fe 50%);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ffd236 50%);
   background-size: 220%;
   transition: all .4s; }
+  .btn-text:hover, .btn-text:active {
+    background-position: 100%;
+    color: #f9f9f9;
+    transform: translateX(1rem); }
 
-.btn-text:hover, .btn-text:active {
-  background-position: 100%;
-  color: #f9f9f9;
-  transform: translateX(1rem); }
+.zone > img {
+  box-shadow: 0 1.5rem 4rem rgba(38, 38, 38, 0.2);
+  border-radius: 50%;
+  z-index: 10;
+  transition: all .2s;
+  outline-offset: 2rem; }
+  .zone > img:hover {
+    outline: 1.5rem solid #d4f6fe;
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(38, 38, 38, 0.5);
+    z-index: 20; }
+  .zone > img:hover .zone > img__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.zone.image {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /* ADD HAMBURGER MENU TO SHOW/HIDE THE NAVIGATION TOGGLE ON/OFF*/
 /* --- Menu Bars  https://www.w3schools.com/howto/howto_css_menu_icon.asp ------------------------------------ */
@@ -252,11 +261,12 @@ body {
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); }
 
-.zone.image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%; }
+.project-container {
+  margin: 55px;
+  padding: 55px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); }
 
 /* --- Heading------------------------------ */
 .text-box {
@@ -354,13 +364,14 @@ section {
   position: relative;
   font-size: 0.8rem;
   /*display: flex;*/
-  padding: 2rem;
+  padding: 6rem;
   /*justify-content: center;
     align-items: center;*/
   color: #262626; }
 
 section#home {
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  padding: 2rem; }
 
 /* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
 .logo {
@@ -380,7 +391,7 @@ section#home a {
   color: #262626;
   border-bottom: 1px solid #262626; }
 
-section#content {
+section#projectOne {
   background-color: #d4f6fe; }
 
 section#components {
@@ -392,7 +403,7 @@ section#utilities {
 section#more {
   background-color: #ffdac6; }
 
-section#layout {
+section#about {
   background-color: #f9f9f9; }
 
 /* Media Query: Large Smartphone (Vertical) */

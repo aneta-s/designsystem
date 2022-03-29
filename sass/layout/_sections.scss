@@ -7,7 +7,7 @@ section {
    position: relative; //this is how logo is palced?
     font-size: 0.8rem;
     /*display: flex;*/
-    padding: 2rem;
+    padding: 6rem;
     /*justify-content: center;
     align-items: center;*/
    // text-transform: uppercase;
@@ -19,6 +19,7 @@ section {
     // linkmuis Copy Image Address and paste belo
     section#home {
         background-color:$nav-color-1;
+        padding: 2rem;
         // background-image: url("https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=986&q=80");
         // background-size: cover;
         // background-position: center center;
@@ -39,6 +40,7 @@ section {
             left: 1.5rem;
             text-decoration: none;
             /*font-size: 0.8rem;*/
+         
             padding-bottom: .5rem;
             color: $color-primary;
             border-bottom: 1px solid $color-primary;
@@ -46,7 +48,7 @@ section {
 
   
        
-        section#content {
+        section#projectOne {
             background-color: $nav-color-2;
     
            
