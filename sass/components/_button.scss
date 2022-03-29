@@ -21,7 +21,29 @@ cursor: pointer;
    
 }
 
-//this button style later
+//NORMAL STATE BUTTON
 .btn-text {
-   font-size: $default-font-size;
+    &:link,
+&:visited {
+
+    font-size: $default-font-size;
+    border: .2rem solid $nav-color-2;   
+    padding: 1.5rem 4rem;//first for top&bottom, second for left&right
+    display: inline-block;//display as inline block (treat it as text box, to add paddings or widths to the element
+     color: $nav-color-2;
+     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $nav-color-2 50%);
+     background-size: 220%;
+     transition: all .4s;
+    }
+
+      //ACT OF STATE
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: $nav-color-1;
+        transform: translateX(1rem);
+    }
+
+
+
 }

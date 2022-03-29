@@ -1,206 +1,216 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chango&family=Erica+One&family=Plaster&family=Poppins:wght@300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="image/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&family=Erica+One&family=Plaster&family=Poppins:wght@300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Aneta Stojanowska | UX/UI Designer</title>
-</head>
-<body>
-  
+  </head>
+  <body>
     <!-- Menu Overlay: add overlay, the dark sms through layer behind navigation, but infront main content -->
     <div class="overlay overlay-slide-left" id="overlay">
-        <!-- Menu Items pointed to the right section id-->
-        <nav>
-            <ul>
-                <!-- Because slide-out- is transforming off the page, we don't see it when load page fro the first time -->
-                <li id="nav-1" class="slide-out-1"><a href="#layout">Layout</a></li>
-                <li id="nav-2" class="slide-out-2"><a href="#content">Content</a></li>
-                <li id="nav-3" class="slide-out-3"><a href="#components">Components</a></li>
-                <li id="nav-4" class="slide-out-4"><a href="#utilities">Utilities</a></li>
-                <li id="nav-5" class="slide-out-5"><a href="#more">More content</a></li>
-            </ul>
-        </nav>
+      <!-- Menu Items pointed to the right section id-->
+      <nav>
+        <ul>
+          <!-- Because slide-out- is transforming off the page, we don't see it when load page fro the first time -->
+          <li id="nav-1" class="slide-out-1"><a href="#layout">Layout</a></li>
+          <li id="nav-2" class="slide-out-2"><a href="#content">Content</a></li>
+          <li id="nav-3" class="slide-out-3">
+            <a href="#components">Components</a>
+          </li>
+          <li id="nav-4" class="slide-out-4">
+            <a href="#utilities">Utilities</a>
+          </li>
+          <li id="nav-5" class="slide-out-5">
+            <a href="#more">More content</a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <!-- Menu bars -->
     <div class="menu-bars" id="menu-bars">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
-<!-- <header class="header">
-<div class="header_logo-box">
-    <img src="image/logo.png" alt="Logo" class="header_logo">
-</div>
-
-<div class="header_text-box">
-<h1 class="heading-primary">
-    <span class="heading-primary--main">Hi, my name is Aneta Stojanowska</span>
-    <span class="heading-primary--sub">I'm UX Designer, based in the Netherlands.</span>
-
-</h1>
-</div>
-</header> -->
     <!-- Sections -->
-    <section id="home"><img src="image/logo.png" alt="Logo" class="logo"></section>
+    <section id="home">
+      <img src="image/logo.png" alt="Logo" class="logo" />
+    </section>
     <div class="text-box">
-        <h1 class="heading-primary">
-            <span class="heading-primary-main">  Hi, my name is <strong>Aneta Stojanowska</strong></span>
-      <!-- span is to style elements differently -->
-         <span class="heading-primary-sub"> I'm UX Designer, based in the Netherlands.</span>
-      
+      <h1 class="heading-primary">
+        <span class="heading-primary-main">
+          Hi, my name is <strong>Aneta Stojanowska</strong></span
+        >
+        <!-- span is to style elements differently -->
+        <span class="heading-primary-sub">
+          I'm UX Designer, based in the Netherlands.</span
+        >
       </h1>
       <!-- below: styles about the color in btn-white class, for buttons functionality use btn class-->
       <a href="#" class="btn btn-white">My Projects</a>
     </div>
-<!-- ABOUT ME PAGE -->
-<main>
-    <section id="layout">
+    <!-- ABOUT ME PAGE -->
+    <main>
+      <section id="layout">
         <!-- utility class u-margin-8 let to stay independent/reusable across the page-->
         <div class="u-center-text u-margin-bottom-big">
-            <h2 class="heading-secondary">About Me</h2>
+          <h2 class="heading-secondary">About Me</h2>
         </div>
-        <!-- <div class="row">
-            <div class="col-1-of-2">
-                <div class="composition">
-                    share smae class (composition__photo), but have different modifier (composition__photo--p1)
-                    <img src="image/profile.jpeg" alt="Profile Photo" class="composition__photo composition__photo--p1" height="auto" width="300px">
-                    <!-- <img src="" alt="" class="composition__photo composition__photo--p1"><img src="" alt="" class="composition__photo composition__photo--p1">-
-                </div> 
-            </div>
-            <div class="col-1-of-2">
-               <h3 class="heading-tertiary u-margin-bottom-small">Welcome on my page</h3>
-               <p class="paragraph">Professional and enthusiastic UX/UI Designer with front-end skills and experience with web mobile design and UX.
-                </p>
-                <h3 class="heading-tertiary u-margin-bottom-small">Another welcome</h3>
-               <p class="paragraph"> I have been designing for 5 years and freelancing for 2 years. I have been a UX/UI Designer for web and mobile apps using Figma/Sketch, Illustrator and HTML-prototypes. I have some experience in facilitaiting the feedback sessions in Agile environments. I have done front-end development with component-based design in modern JavaScript frameworks.
-                </p>
+        <div class="container">
+          <div class="zone image">
+            <!-- style="margin:40px auto; text-align:center;" -->
+            <img
+              src="image/profile.jpg"
+              alt="Profile Photo"
+              class="photo"
+              height="auto"
+              width="200px"
+            />
+          </div>
+          <div class="zone text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Welcome on my page
+            </h3>
+            <p class="paragraph">
+              Professiffonagdsdfl and enthusiastic UX/UI Designer with front-end
+              skills and experience with web mobile design and UX.
+            </p>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Another welcome
+            </h3>
+            <p class="paragraph">
+              I have been designing for 5 years and freelancing for 2 years. I
+              have been a UX/UI Designer for web and mobile apps using
+              Figma/Sketch, Illustrator and HTML-prototypes. I have some
+              experience in facilitaiting the feedback sessions in Agile
+              environments. I have done front-end development with
+              component-based design in modern JavaScript frameworks.
+            </p>
 
-                <a href="#" class="btn-text">Resume &rarr;</a>
-            </div> -->
- 
+            <a href="assets/resume-uxui-designer.pdf" class="btn-text">Resume &rarr;</a>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-1-of-3">
-                <div class="composition">
-                    <!-- style="margin:40px auto; text-align:center;" -->
-                    <img src="image/profile.jpg" alt="Profile Photo" class="composition__photo composition__photo--p1" height="auto" width="300px">
-                </div> 
-            </div>
-            <div class="col-2-of-3">
-                <h3 class="heading-tertiary u-margin-bottom-small">Welcome on my page</h3>
-                <p class="paragraph">Professionagdsdfl and enthusiastic UX/UI Designer with front-end skills and experience with web mobile design and UX.
-                 </p>
-                 <h3 class="heading-tertiary u-margin-bottom-small">Another welcome</h3>
-                <p class="paragraph"> I have been designing for 5 years and freelancing for 2 years. I have been a UX/UI Designer for web and mobile apps using Figma/Sketch, Illustrator and HTML-prototypes. I have some experience in facilitaiting the feedback sessions in Agile environments. I have done front-end development with component-based design in modern JavaScript frameworks.
-                 </p>
- 
-                 <a href="#" class="btn-text">Resume &rarr;</a>
-                            </div>
-        </div>
-    </section>
-</main>
+      </section>
+    </main>
     <section id="content">
-        <!-- of .active? -->
-        <div class="typography">
-            <h1>Info about Typography</h1>
-            <p>Description abougfkfye Typography, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
+      <!-- of .active? -->
+      <div class="typography">
+        <h1>Info about Typography</h1>
+        <p>
+          Description abougfkfye Typography, including global settings,
+          headings, body text, lists and more. Also information how to use the
+          typography, in which ocontext of the product, also called the
+          functional model
+        </p>
+        <div class="display">
+          <h1><span>4em</span> Design system is how design works</h1>
+          <h2><span>3em</span> Design system is how design works</h2>
+          <h3><span>2em</span> Design system is how design works</h3>
+          <h4><span>1em</span> Design system is how design works</h4>
 
-
-                <h1>
-                    <span>4em</span> Design system is how design works
-                </h1>
-                <h2>
-                    <span>3em</span> Design system is how design works
-                </h2>
-                <h3>
-                    <span>2em</span> Design system is how design works
-                </h3>
-                <h4>
-                    <span>1em</span> Design system is how design works
-                </h4>
-
-                <textarea disabled> source code </textarea>
-            </div>
+          <textarea disabled> source code </textarea>
         </div>
+      </div>
     </section>
     <section id="components">
-        <div class="main-nav">
-            <h1>Info about Navigation</h1>
-            <p>Description about the Navigation also Footer called, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-                Display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      <div class="main-nav">
+        <h1>Info about Navigation</h1>
+        <p>
+          Description about the Navigation also Footer called, including global
+          settings, headings, body text, lists and more. Also information how to
+          use the typography, in which ocontext of the product, also called the
+          functional model
+        </p>
+        <div class="display">
+          Display data here
+          <textarea disabled> source code </textarea>
         </div>
-        <div class="box">
-            <h1>Info about Cards/grid individual</h1>
-            <p>Description about the Cards, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-                Display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      </div>
+      <div class="box">
+        <h1>Info about Cards/grid individual</h1>
+        <p>
+          Description about the Cards, including global settings, headings, body
+          text, lists and more. Also information how to use the typography, in
+          which ocontext of the product, also called the functional model
+        </p>
+        <div class="display">
+          Display data here
+          <textarea disabled> source code </textarea>
         </div>
+      </div>
     </section>
     <section id="utilities">
-        <div class="radar">
-            <h1>Info about Radar chart</h1>
-            <p>Description about the Typography, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-
-
-                display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      <div class="radar">
+        <h1>Info about Radar chart</h1>
+        <p>
+          Description about the Typography, including global settings, headings,
+          body text, lists and more. Also information how to use the typography,
+          in which ocontext of the product, also called the functional model
+        </p>
+        <div class="display">
+          display data here
+          <textarea disabled> source code </textarea>
         </div>
-        <div class="bar">
-            <h1>Info about bar chart</h1>
-            <p>Description about the bar chart, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-
-
-                display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      </div>
+      <div class="bar">
+        <h1>Info about bar chart</h1>
+        <p>
+          Description about the bar chart, including global settings, headings,
+          body text, lists and more. Also information how to use the typography,
+          in which ocontext of the product, also called the functional model
+        </p>
+        <div class="display">
+          display data here
+          <textarea disabled> source code </textarea>
         </div>
+      </div>
     </section>
     <section id="more">
-        <div class="container">
-            <h1>Info about Layout Cover</h1>
-            <p>Description about the layout, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-
-
-                display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      <div class="container">
+        <h1>Info about Layout Cover</h1>
+        <p>
+          Description about the layout, including global settings, headings,
+          body text, lists and more. Also information how to use the typography,
+          in which ocontext of the product, also called the functional model
+        </p>
+        <div class="display">
+          display data here
+          <textarea disabled> source code </textarea>
         </div>
-        <div id="header">
-            <h1>Info about title header</h1>
-            <p>Description about the layout, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-
-
-                display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      </div>
+      <div id="header">
+        <h1>Info about title header</h1>
+        <p>
+          Description about the layout, including global settings, headings,
+          body text, lists and more. Also information how to use the typography,
+          in which ocontext of the product, also called the functional model
+        </p>
+        <div class="display">
+          display data here
+          <textarea disabled> source code </textarea>
         </div>
-        <div class="grid-wrapper ">
-            <h1>Info about Layout boxes</h1>
-            <p>Description about the layout, including global settings, headings, body text, lists and more. Also information how to use the typography, in which ocontext of the product, also called the functional model </p>
-            <div class="display">
-
-
-                display data here
-                <textarea disabled> source code </textarea>
-            </div>
+      </div>
+      <div class="grid-wrapper">
+        <h1>Info about Layout boxes</h1>
+        <p>
+          Description about the layout, including global settings, headings,
+          body text, lists and more. Also information how to use the typography,
+          in which ocontext of the product, also called the functional model
+        </p>
+        <div class="display">
+          display data here
+          <textarea disabled> source code </textarea>
         </div>
+      </div>
     </section>
     <!-- Script -->
     <script src="script.js"></script>
@@ -268,5 +278,5 @@
             </div>
         </section>
         -->
-</body>
+  </body>
 </html>
