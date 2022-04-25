@@ -46,22 +46,24 @@ section {
             border-bottom: 1px solid $color-primary;
         }
 
-  
+        section#about{
+            background-color:$nav-color-1;
+        }
        
-        section#projectOne {
+        section#project-one{
             background-color: $nav-color-2;
     
            
         }
     
-        section#components {
+        section#projectTwo {
             background-color: $nav-color-3;
         }
     
-        section#utilities {
+        section#projectThree {
             background-color: $nav-color-4;
         }
     
-        section#more {
+        section#contact {
             background-color: $nav-color-5;
         }

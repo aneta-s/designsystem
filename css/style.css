@@ -391,20 +391,20 @@ section#home a {
   color: #262626;
   border-bottom: 1px solid #262626; }
 
-section#projectOne {
-  background-color: #d4f6fe; }
-
-section#components {
-  background-color: #fef1d6; }
-
-section#utilities {
-  background-color: #e7d8fc; }
-
-section#more {
-  background-color: #ffdac6; }
-
 section#about {
   background-color: #f9f9f9; }
+
+section#project-one {
+  background-color: #d4f6fe; }
+
+section#projectTwo {
+  background-color: #fef1d6; }
+
+section#projectThree {
+  background-color: #e7d8fc; }
+
+section#contact {
+  background-color: #ffdac6; }
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
