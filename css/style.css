@@ -406,6 +406,61 @@ section#project-three {
 section#contact {
   background-color: #ffdac6; }
 
+section#project-one {
+  overflow: auto;
+  min-height: 100vh; }
+
+.footer {
+  color: #f9f9f9;
+  padding: 4.8rem 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .footer__text {
+    color: #7a7a7a;
+    font-size: 1.3rem; }
+    .footer__text a {
+      color: #7a7a7a;
+      font-size: 1.3rem;
+      transition: all 0.4s;
+      display: inline-block; }
+      .footer__text a:hover, .footer__text a:active {
+        color: #262626;
+        -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .footer hr {
+    margin: 1rem auto;
+    border: 0;
+    width: 100%;
+    border-top: 1px solid #262626; }
+  .footer .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .footer .social-links a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #f9f9f9;
+      font-size: 3rem;
+      width: 5rem;
+      height: 5rem;
+      margin: 1.6rem 1.6rem;
+      transition: all 0.2s ease-in; }
+      .footer .social-links a:hover {
+        transform: translateY(-2px); }
+  .footer .back-to-top i {
+    color: #262626;
+    margin: 1rem 0 1.6rem;
+    transition: all 0.2s ease-in; }
+    .footer .back-to-top i:hover {
+      transform: translateY(-2px); }
+
+section#about {
+  background-color: #f9f9f9; }
+
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
   section#home a {
