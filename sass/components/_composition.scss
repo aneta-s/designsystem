@@ -1,7 +1,7 @@
 .zone > img {
     box-shadow: 0 1.5rem 4rem rgba($color-primary, .2);
     border-radius: 50%;
-    z-index: 10;
+   z-index: none;
     transition: all .2s;
     outline-offset: 2rem;
 
