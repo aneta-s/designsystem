@@ -109,12 +109,8 @@ Below animation takes 0.4s and for each of the animation it launch .2s after the
     opacity: 1;
     transform: translate(0); } }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
+* {
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
@@ -359,7 +355,7 @@ nav li:nth-of-type(5) {
 
 /* --- Sections ------------------------------------ */
 section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   font-size: 0.8rem;
@@ -370,8 +366,7 @@ section {
   color: #262626; }
 
 section#home {
-  background-color: #f9f9f9;
-  padding: 2rem; }
+  background-color: #f9f9f9; }
 
 /* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
 .logo {
@@ -387,7 +382,6 @@ section#home a {
   left: 1.5rem;
   text-decoration: none;
   /*font-size: 0.8rem;*/
-  padding-bottom: .5rem;
   color: #262626;
   border-bottom: 1px solid #262626; }
 

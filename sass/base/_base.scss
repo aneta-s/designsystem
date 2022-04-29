@@ -1,15 +1,19 @@
 // universal selector - added by jonas https://stackoverflow.com/questions/46475916/whats-the-difference-between-and-html-in-css-selector All * sudo elements gets this behavior, except before&afterie buttons behavior will behave as expected
-*,
-*::after,
-*::before { //section 18
-    margin:0;
-    padding: 0;
-    box-sizing:inherit; //added adv scss
+*{ //section 18
+
+  box-sizing: border-box; //added adv scss
 }
 
+// *,
+// *::after,
+// *::before { //section 18
+//     margin:0;
+//     padding: 0;
+//    box-sizing:inherit; //added adv scss
+// }
 
 html {
-   // box-sizing: border-box;  moved to universal selector with inherit
+// box-sizing: border-box;     // moved to universal selector with inherit
   font-size: 62.5%;     //define what 1 rem is added adv scss; zoom on the page automatically, it is root font, if user change to 20px, then the font will be 12.5px
 }
 
