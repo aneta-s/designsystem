@@ -382,6 +382,7 @@ section#home a {
   left: 1.5rem;
   text-decoration: none;
   /*font-size: 0.8rem;*/
+  padding-bottom: .5rem;
   color: #262626;
   border-bottom: 1px solid #262626; }
 

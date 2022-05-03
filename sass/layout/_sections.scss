@@ -20,7 +20,7 @@ section {
     // linkmuis Copy Image Address and paste belo
     section#home {
         background-color:$nav-color-1;
-      //  margin: 2rem;
+
        //padding: 2rem;
         // background-image: url("https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=986&q=80");
         // background-size: cover;
@@ -43,7 +43,7 @@ section {
             text-decoration: none;
             /*font-size: 0.8rem;*/
          
-            //padding-bottom: .5rem;
+            padding-bottom: .5rem;
             color: $color-primary;
             border-bottom: 1px solid $color-primary;
         }
